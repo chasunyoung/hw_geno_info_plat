@@ -30,16 +30,15 @@
 	</bean>
 	
 	<bean id="multipartResolver" class="org.springframework.web.multipart.support.StandardServletMultipartResolver"></bean>
-	<context:component-scan base-package="kr.if.hgip" />
 	
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
         <!-- <property name="url" 
-        		  value="jdbc:mysql://localhost:3306/iso159?useUnicode=true&amp;characterEncoding=euckr"/>         -->
+        		  value="jdbc:mysql://localhost:3306/hgip?useUnicode=true&amp;characterEncoding=euckr"/>         -->
         <property name="url" 
-        		  value="jdbc:mysql://locall:3306/hgip?useUnicode=true&amp;characterEncoding=euckr"/>
-        <property name="username" value="root"/>
-        <property name="password" value="java0000"/>
+        		  value="jdbc:mysql://localhost:3306/hw_geno_info_plat?useUnicode=true&amp;characterEncoding=euckr"/>
+        <property name="username" value="ifjbnu"/>
+        <property name="password" value="hgip"/>
     </bean>
     
     <!-- connection가진 tx기능을 spring에게 위임 -->

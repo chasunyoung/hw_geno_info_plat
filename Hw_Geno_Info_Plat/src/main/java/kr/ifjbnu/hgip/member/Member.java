@@ -8,7 +8,7 @@ public class Member {
 		private String name;
 		private String cellphone;
 		private String email;
-		private String sex;
+		private String gender;
 		private String birth;
 		
 		public Integer getId() {
@@ -47,11 +47,11 @@ public class Member {
 		public void setEmail(String email) {
 			this.email = email;
 		}
-		public String getSex() {
-			return sex;
+		public String getgender() {
+			return gender;
 		}
-		public void setSex(String sex) {
-			this.sex = sex;
+		public void setgender(String gender) {
+			this.gender = gender;
 		}
 		public String getBirth() {
 			return birth;
@@ -63,7 +63,7 @@ public class Member {
 		@Override
 		public String toString() {
 			return "Member [id=" + id + ", mId=" + mId + ", mPw=" + mPw + ", name=" + name
-					+", cellphone=" + cellphone + ", email=" + email + ", sex=" + sex
+					+", cellphone=" + cellphone + ", email=" + email + ", gender=" + gender
 					+", birth=" + birth+ "]";
 		}
 		

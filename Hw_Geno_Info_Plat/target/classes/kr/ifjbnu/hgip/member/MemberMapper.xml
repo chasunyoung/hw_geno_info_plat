@@ -12,7 +12,7 @@
 				, mPw
 				, name
                 , birth
-                , sex
+                , gender
                 , cellphone
                 , email
 			)
@@ -22,9 +22,20 @@
 				, #{mPw}
 				, #{name}
                 , #{birth}
-                , #{sex}
+                , #{gender}
                 , #{cellphone}
                 , #{email}
 			)
 	</insert>
+	
+	<!-- 로그인 -->
+	<select id="selectLoginInfo" parameterType="kr.ifjbnu.hgip.member.Member"
+		resultType="kr.ifjbnu.hgip.member.Member">
+		SELECT
+			mId
+		FROM 
+			member
+		WHERE 
+			mId = #{mId} AND mPw = #{mPw}	
+	</select>
 </mapper>

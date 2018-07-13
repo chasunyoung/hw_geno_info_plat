@@ -21,4 +21,11 @@ public class MemberDao {
 		logger.debug("signUp(Member member)메서드 member is {}", member);
 		sqlSessionTemplate.insert(nameSpace+"signUp", member);
 	}
+	//로그인정보조회
+	public Member selectLogin(Member member) {
+		logger.debug("selectLoginInfo(...) 메서드 member is {}", member);
+		Member memberInfo = sqlSessionTemplate.selectOne(nameSpace+"selectLoginInfo", member);
+		logger.debug("selectLoginInfo(...) 메서드 memberInfo is {}", memberInfo);
+		return memberInfo;
+	}
 }

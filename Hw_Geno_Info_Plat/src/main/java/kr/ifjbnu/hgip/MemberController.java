@@ -55,4 +55,12 @@ public class MemberController {
 		session.setAttribute("loginId", loginId);
 		return "redirect:/";
 	}
+	
+	//로그아웃
+	@RequestMapping(value = "/member/logout", method = RequestMethod.GET)
+	public String logout(HttpSession session) {
+		logger.debug("로그아웃 요청");
+		session.invalidate();
+		return "redirect:/";
+	}
 }

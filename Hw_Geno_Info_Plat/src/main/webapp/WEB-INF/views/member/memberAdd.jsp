@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script src="${pageContext.request.contextPath}/resources/vendor/jquery/jquery.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -18,12 +19,15 @@
 				</tr>
 				<tr>
 					<td>비밀번호</td>
-					<td><input class="" type="password" name="mPw"></td>
+					<td><input class="" id="pw" type="password" name="mPw"></td>
 				</tr>
-				<!-- <tr>
+				<tr>
 					<td>비밀번호확인</td>
-					<td><input class="" type="password" name="mPw"></td>
-				</tr> -->
+					<td>
+						<input class="" id="pwcheck" type="password"> &nbsp;
+						<font id="check" size="2" color="red"></font>
+					</td>
+				</tr>
 				<tr>
 					<td>이름</td>
 					<td><input class="" type="text" name="name"></td>	
@@ -52,5 +56,21 @@
 		</form>
 		</div>
 	</div>
+	<script>
+		 $(function(){
+		  $('#pw').keyup(function(){
+		   $('#check').text('');
+		  }); //#pw.keyup
+		
+		  $('#pwcheck').keyup(function(){
+		   if($('#pw').val()!=$('#pwcheck').val()){
+		    $('#check').text('');
+		    $('#check').html("비밀번호가 일치하지 않습니다");
+		   }else{
+		    $('#check').text('');
+		   }
+		  }); //#pwcheck.keyup
+		 });
+	</script>
 </body>
 </html>

@@ -11,8 +11,8 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="kr.if.hgip">
-		<level value="info" />
+	<logger name="kr.ifjbnu.hgip">
+		<level value="debug" />
 	</logger>
 	
 	<!-- 3rdparty Loggers -->

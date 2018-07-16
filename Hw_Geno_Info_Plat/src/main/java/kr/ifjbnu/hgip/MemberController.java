@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import kr.ifjbnu.hgip.member.Member;
+import kr.ifjbnu.hgip.member.MemberCommand;
 import kr.ifjbnu.hgip.member.MemberService;
 
 @Controller
@@ -29,9 +30,9 @@ public class MemberController {
 	
 	//회원가입
 	@RequestMapping(value="/member/memberAdd", method=RequestMethod.POST)
-	public String memberAdd(Member member) {
-		logger.debug("memberAdd(...) 메서드 member is {}", member);
-		memberService.addMember(member);		
+	public String memberAdd(MemberCommand memberCommand) {
+		logger.debug("memberAdd(...) 메서드 member is {}", memberCommand);
+		memberService.addMember(memberCommand);		
 		return "home";
 	}
 	
